@@ -6,18 +6,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    use Billable;
 
     protected $fillable = [
-        'users_name',
-        'users_email',
-        'users_email_verified_at',
-        'users_password',
-        'users_plans_id',
+        'name',
+        'email',
+        'email_verified_at',
+        'password',
+        'plans_id',
         'remember_token'
     ];
 
@@ -28,12 +29,13 @@ class User extends Authenticatable
         return $this->hasOne(PremiumUsers::class);
     }
 
+    public function purchaseHistory(){
+        return $this->hasMany(PurchaseHistory::class);
+    }
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
-
     protected function casts(): array
     {
         return [

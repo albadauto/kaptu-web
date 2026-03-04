@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('tenant_trials_end');
             $table->boolean('tenant_is_active');
             $table->unsignedBigInteger('tenant_user_id');
-            $table->foreign('tenant_user_id')->references('users_id')->on('users');
+            $table->foreign('tenant_user_id')->references('id')->on('users');
         });
     }
 

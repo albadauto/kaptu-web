@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Services;
+
+use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\LoginRequest;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
+class UsuarioService
+{
+    public function CriarUsuario(CreateUserRequest $request){
+        return User::create([
+            'name' => $request->nome,
+            'email' => $request->email,
+            'password' => Hash::make($request->senha),
+        ]);
+    }
+
+    public function LogarUsuario(LoginRequest $request){
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return true;
+        }
+        return false;
+    }
+}

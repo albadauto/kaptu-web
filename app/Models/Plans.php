@@ -25,4 +25,8 @@ class Plans extends Model
         return $this->hasOne(PremiumUsers::class);
     }
 
+    public function purchaseHistory(){
+        return $this->hasOne(PurchaseHistory::class);
+    }
+
 }

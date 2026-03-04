@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('purchase_history', function (Blueprint $table) {
             $table->id('purchase_history_id');
-            $table->unsignedBigInteger('purchase_history_plans_id');
+            $table->unsignedBigInteger('purchase_history_plans_id')->nullable();
             $table->unsignedBigInteger('purchase_history_user_id');
-            $table->foreign('purchase_history_plans_id')->references('plans_id')->on('plans');
-            $table->foreign('purchase_history_user_id')->references('users_id')->on('users');
+            $table->foreign('purchase_history_plans_id')->references('plans_id')->on('plans')
+            ->nullOnDelete();
+            $table->foreign('purchase_history_user_id')->references('id')->on('users');
             $table->string('purchase_history_status');
+            $table->timestamps();
         });
     }
     /**
