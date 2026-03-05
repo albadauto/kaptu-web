@@ -6,7 +6,7 @@
             Escolha seu Plano
         </h1>
         <p class="text-gray-500 mt-3">
-            Comece no Chave Digital e evolua conforme precisar, simples assim!
+            Comece no Movvi e evolua conforme precisar, simples assim!
         </p>
     </div>
 
@@ -30,7 +30,7 @@
             </ul>
             <form action="{{ route('pagamento.checkout', 'price_1T6BcAC6gzfmqJLeGHAU3BXp') }}" method="POST">
                 @csrf
-                <button class="mt-8 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-700 transition" type="submit">
+                <button class="mt-8 w-full bg-[#050a30] text-white py-3 rounded-lg hover:bg-gray-700 transition" type="submit">
                     Assinar
                 </button>
             </form>
@@ -39,9 +39,9 @@
 
 
         <!-- Plano Pro (Destaque) -->
-        <div class="bg-black text-white rounded-2xl shadow-2xl p-10 text-center scale-105">
+        <div class="bg-[#050a30] text-white rounded-2xl shadow-2xl p-10 text-center scale-105">
 
-            <span class="bg-white text-black px-3 py-1 rounded-full text-sm font-semibold">
+            <span class="bg-white text-[#050a30] px-3 py-1 rounded-full text-sm font-semibold">
                 Mais Popular
             </span>
 
@@ -60,7 +60,7 @@
             </ul>
             <form action="{{ route('pagamento.checkout', 'price_1T6BcoC6gzfmqJLe2zXvEtiS') }}" method="POST">
                 @csrf
-                <button class="mt-8 w-full bg-white text-black py-3 rounded-lg font-semibold hover:bg-gray-100 transition" type="submit">
+                <button class="mt-8 w-full bg-white text-[#050a30] py-3 rounded-lg font-semibold hover:bg-gray-100 transition" type="submit">
                     Assinar Agora
                 </button>
             </form>
@@ -84,7 +84,7 @@
             </ul>
             <form action="{{ route('pagamento.checkout', 'price_1T6BefC6gzfmqJLeLrmK8cTM') }}" method="POST">
                 @csrf
-                <button class="mt-8 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-700 transition" type="submit">
+                <button class="mt-8 w-full bg-[#050a30] text-white py-3 rounded-lg hover:bg-gray-700 transition" type="submit">
                     Assinar
                 </button>
             </form>

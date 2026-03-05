@@ -4,7 +4,7 @@ use App\Http\Controllers\PagamentoController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\LoginController;
 use \App\Http\Controllers\UsuarioController;
-
+use \Laravel\Cashier\Http\Controllers\WebhookController;
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 
@@ -23,3 +23,5 @@ Route::prefix('pagamento')->group(function () {
 Route::get('/home', function () {
     return redirect()->route('login');
 })->name('home');
+
+Route::post('/stripe/webhook', [WebhookController::class]);

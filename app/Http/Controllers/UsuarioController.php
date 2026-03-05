@@ -6,8 +6,6 @@ use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\LoginRequest;
 use App\Services\HistoricoService;
 use App\Services\UsuarioService;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class UsuarioController extends Controller
 {

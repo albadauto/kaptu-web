@@ -22,7 +22,6 @@
     </head>
     <body class="bg-[#FDFDFC]  flex p-6 lg:p-8  min-h-screen flex-col">
         @yield('content')
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </body>
 
 </html>

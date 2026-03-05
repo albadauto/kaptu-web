@@ -24,7 +24,7 @@
                     <input
                         type="email"
                         placeholder="seu@email.com" name="email"
-                        class="w-full mt-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none transition"
+                        class="w-full mt-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#050a30] focus:outline-none transition"
                     />
                 </div>
 
@@ -34,7 +34,7 @@
                     <input
                         type="password" name="password"
                         placeholder="••••••••"
-                        class="w-full mt-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none transition"
+                        class="w-full mt-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#050a30] focus:outline-none transition"
                     />
                 </div>
 
@@ -45,14 +45,14 @@
                         <span class="text-gray-600">Lembrar-me</span>
                     </label>
 
-                    <a href="#" class="text-black hover:underline">
+                    <a href="#" class="text-[#050a30] hover:underline">
                         Esqueceu a senha?
                     </a>
                 </div>
 
                 <!-- Botão -->
                 <button
-                    class="w-full bg-black hover:bg-gray-700 text-white font-semibold py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-xl"
+                    class="w-full bg-[#050a30] hover:bg-gray-700 text-white font-semibold py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-xl"
                     type="submit">
                     Entrar
                 </button>
@@ -69,7 +69,7 @@
             <!-- Criar conta -->
             <p class="text-center text-sm text-gray-600">
                 Não tem conta?
-                <a href="{{ route('usuario.registro') }}" class="text-black font-medium hover:underline">
+                <a href="{{ route('usuario.registro') }}" class="text-[#050a30] font-medium hover:underline">
                     Criar agora
                 </a>
             </p>
